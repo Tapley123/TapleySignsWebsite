@@ -154,6 +154,8 @@
     .navbar .navbar-brand {
       color: #3B4C77 !important;
       font-weight: 700;
+      font-size: 12px !important;
+      line-height: 20px !important;
     }
 
     .navbar-nav li a:hover,
@@ -536,6 +538,152 @@
         font-size: 22px;
       }
     }
+
+    /* How It Works section */
+    .process-step {
+      padding: 20px 25px;
+    }
+
+    .process-number {
+      display: inline-block;
+      width: 36px;
+      height: 36px;
+      line-height: 36px;
+      border-radius: 50%;
+      background-color: #3B4C77;
+      color: #fff;
+      font-family: Montserrat, sans-serif;
+      font-weight: 700;
+      font-size: 16px;
+      margin-bottom: 12px;
+    }
+
+    .process-step p {
+      font-size: 14px;
+    }
+
+    /* Video/showreel section */
+    .video-wrapper {
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+      overflow: hidden;
+      border-top: 4px solid #3B4C77;
+    }
+
+    .video-wrapper iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    /* Portfolio lightbox */
+    .carousel-inner .item img {
+      cursor: pointer;
+    }
+
+    #lightboxModal .modal-content {
+      background-color: #1a1a1a;
+      border: none;
+      border-radius: 0;
+    }
+
+    #lightboxModal .modal-header {
+      border-bottom: none;
+      padding: 10px 15px 0;
+    }
+
+    #lightboxModal .close {
+      color: #fff;
+      opacity: 0.7;
+      font-size: 28px;
+    }
+
+    #lightboxModal .close:hover {
+      opacity: 1;
+    }
+
+    #lightboxModal .modal-body {
+      padding: 10px 15px 15px;
+    }
+
+    #lightboxModal .modal-footer {
+      border-top: 1px solid #333;
+      padding: 10px 15px 15px;
+      text-align: center;
+    }
+
+    #lightboxCaption {
+      color: #aaa;
+      font-size: 13px;
+      font-family: Lato, sans-serif;
+      font-weight: 400;
+      letter-spacing: 0;
+      margin: 0;
+    }
+
+    /* Instagram section */
+    .instagram-grid {
+      margin-top: 20px;
+      margin-bottom: 30px;
+    }
+
+    .instagram-cell {
+      padding: 6px;
+    }
+
+    .instagram-placeholder {
+      background-color: #e8e8e8;
+      padding-bottom: 100%;
+      position: relative;
+      overflow: hidden;
+      border-radius: 3px;
+      transition: opacity 0.3s;
+    }
+
+    .instagram-placeholder:hover {
+      opacity: 0.75;
+    }
+
+    .instagram-placeholder svg {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 36px;
+      height: 36px;
+      color: #bbb;
+    }
+
+    .instagram-btn {
+      background-color: #3B4C77 !important;
+      color: #fff !important;
+      border-color: #3B4C77 !important;
+      font-family: Montserrat, sans-serif;
+      letter-spacing: 2px;
+      font-size: 13px;
+    }
+
+    .instagram-btn:hover {
+      background-color: #2d3a5c !important;
+      border-color: #2d3a5c !important;
+      color: #fff !important;
+    }
+
+    .instagram-btn svg {
+      vertical-align: middle;
+      margin-right: 8px;
+      margin-top: -2px;
+    }
+
+    @media screen and (max-width: 768px) {
+      .process-step {
+        margin: 15px 0;
+      }
+    }
   </style>
 </head>
 
@@ -550,13 +698,14 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="#myPage">Tapley Signs</a>
       </div>
       <div class="collapse navbar-collapse" id="myNavbar">
         <ul class="nav navbar-nav navbar-right">
           <li><a href="#about">ABOUT</a></li>
           <li><a href="#services">SERVICES</a></li>
+          <li><a href="#process">PROCESS</a></li>
           <li><a href="#portfolio">PORTFOLIO</a></li>
+          <li><a href="gallery.html">GALLERY</a></li>
           <li><a href="#clients">CLIENTS</a></li>
           <li><a href="#faq">FAQ</a></li>
           <li><a href="#contact">CONTACT</a></li>
@@ -580,7 +729,7 @@
   <div class="stats-bar">
     <div class="row">
       <div class="col-xs-6 col-sm-3 stat-item">
-        <span class="stat-number">21+</span>
+        <span class="stat-number"><span class="counter" data-target="21">0</span>+</span>
         <span class="stat-label">Years in Business</span>
       </div>
       <div class="col-xs-6 col-sm-3 stat-item">
@@ -588,7 +737,7 @@
         <span class="stat-label">Projects Completed</span>
       </div>
       <div class="col-xs-6 col-sm-3 stat-item">
-        <span class="stat-number">9+</span>
+        <span class="stat-number"><span class="counter" data-target="9">0</span>+</span>
         <span class="stat-label">Major Brand Clients</span>
       </div>
       <div class="col-xs-6 col-sm-3 stat-item">
@@ -659,6 +808,56 @@
         <span class="glyphicon glyphicon-wrench logo-small"></span>
         <h4>Professional Installation</h4>
         <p>Our specialist team of fitters ensures every job is installed to the highest standard, on schedule and on budget. We cover sites across Dublin and nationwide.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Container (How It Works Section) -->
+  <div id="process" class="container-fluid text-center">
+    <h2>How It Works</h2>
+    <hr style="border-top: 2px solid #3B4C77; width: 50px; margin: 0 auto 25px;">
+    <h4>From brief to installation in four steps</h4>
+    <div class="row slideanim">
+      <div class="col-sm-3 process-step">
+        <div class="process-number">1</div>
+        <span class="glyphicon glyphicon-envelope logo-small"></span>
+        <h4>Get in Touch</h4>
+        <p>Tell us about your project by phone or email. We&rsquo;ll ask the right questions to understand your brief, timeline, and artwork situation.</p>
+      </div>
+      <div class="col-sm-3 process-step">
+        <div class="process-number">2</div>
+        <span class="glyphicon glyphicon-pencil logo-small"></span>
+        <h4>Artwork &amp; Approval</h4>
+        <p>Send us your print-ready files (PDF, AI, EPS at 300dpi). Don&rsquo;t have artwork? We&rsquo;ll connect you with a design partner and guide you through the process.</p>
+      </div>
+      <div class="col-sm-3 process-step">
+        <div class="process-number">3</div>
+        <span class="glyphicon glyphicon-print logo-small"></span>
+        <h4>Print &amp; Production</h4>
+        <p>We produce your graphics using the latest large-format digital print technology, with strict colour and quality checks before anything leaves our workshop.</p>
+      </div>
+      <div class="col-sm-3 process-step">
+        <div class="process-number">4</div>
+        <span class="glyphicon glyphicon-wrench logo-small"></span>
+        <h4>Professional Installation</h4>
+        <p>Our specialist fitters install your graphics on-site, on schedule. We handle single locations and nationwide multi-branch rollouts.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Container (Showreel Section) -->
+  <div id="showreel" class="container-fluid text-center bg-grey">
+    <h2>See Our Work</h2>
+    <hr style="border-top: 2px solid #3B4C77; width: 50px; margin: 0 auto 25px;">
+    <h4>Watch us in action</h4>
+    <div class="row slideanim">
+      <div class="col-sm-8 col-sm-offset-2">
+        <!-- Replace ZlISzg0yXtE with your own YouTube video ID when available -->
+        <div class="video-wrapper">
+          <iframe src="https://www.youtube.com/embed/ZlISzg0yXtE?rel=0"
+                  allowfullscreen
+                  title="Sign installation showreel"></iframe>
+        </div>
       </div>
     </div>
   </div>
@@ -867,8 +1066,9 @@
     </div>
   </div>
 
+
   <!-- Container (FAQ Section) -->
-  <div id="faq" class="container-fluid">
+  <div id="faq" class="container-fluid bg-grey">
     <div class="row">
       <div class="col-sm-10 col-sm-offset-1">
         <h2 class="text-center">Frequently Asked Questions</h2>
@@ -1087,6 +1287,23 @@
     </div>
   </footer>
 
+  <!-- Lightbox Modal -->
+  <div id="lightboxModal" class="modal fade" role="dialog" aria-labelledby="lightboxCaption">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">&times;</button>
+        </div>
+        <div class="modal-body">
+          <img id="lightboxImg" src="" alt="" class="img-responsive" style="margin: 0 auto;">
+        </div>
+        <div class="modal-footer">
+          <p id="lightboxCaption"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <script>
     $(document).ready(function () {
       // Smooth scrolling for navbar and footer links
@@ -1128,6 +1345,43 @@
             $(this).addClass("slide");
           }
         });
+      });
+
+      // Animated counters — fires once when stats bar scrolls into view
+      $(window).on('scroll.counters', function () {
+        var statsBar = $('.stats-bar');
+        if (!statsBar.length || statsBar.data('animated')) return;
+        var statsTop = statsBar.offset().top;
+        var winBottom = $(window).scrollTop() + $(window).height();
+        if (winBottom > statsTop + 50) {
+          statsBar.data('animated', true);
+          $(window).off('scroll.counters');
+          $('.counter').each(function () {
+            var $el = $(this);
+            var target = parseInt($el.data('target'));
+            var stepTime = 30;
+            var steps = Math.round(1500 / stepTime);
+            var increment = target / steps;
+            var current = 0;
+            var timer = setInterval(function () {
+              current += increment;
+              if (current >= target) {
+                current = target;
+                clearInterval(timer);
+              }
+              $el.text(Math.floor(current));
+            }, stepTime);
+          });
+        }
+      });
+
+      // Portfolio lightbox
+      $(document).on('click', '.carousel-inner .item img', function () {
+        var src = $(this).attr('src');
+        var alt = $(this).attr('alt');
+        $('#lightboxImg').attr('src', src).attr('alt', alt);
+        $('#lightboxCaption').text(alt);
+        $('#lightboxModal').modal('show');
       });
     });
   </script>

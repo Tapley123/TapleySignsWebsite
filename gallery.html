@@ -1,126 +1,363 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-<style>
-div.gallery {
-  border: 1px solid #ccc;
-}
+  <title>Gallery — Tapley Signs Dublin</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Browse the Tapley Signs project gallery — building wraps, mesh banners, window graphics, in-store installations and more across Dublin and Ireland.">
+  <link rel="icon" href="Images/X Icons/Favicon.png" type="image/x-icon">
+  <link rel="shortcut icon" href="Images/X Icons/apple touch icon.png" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+    html {
+      overflow-y: scroll;
+    }
 
-div.gallery:hover {
-  border: 1px solid #777;
-}
+    body {
+      font: 400 15px Lato, sans-serif;
+      color: #818181;
+      padding-top: 50px;
+    }
 
-div.gallery img {
-  width: 100%;
-  height: auto;
-}
+    .navbar {
+      margin-bottom: 0;
+      background-color: #3B4C77;
+      z-index: 9999;
+      border: 0;
+      font-size: 12px !important;
+      line-height: 1.42857143 !important;
+      letter-spacing: 4px;
+      border-radius: 0;
+      font-family: Montserrat, sans-serif;
+      font-weight: 700;
+    }
 
-div.desc {
-  padding: 15px;
-  text-align: center;
-}
+    .navbar li a,
+    .navbar .navbar-brand {
+      color: #fff !important;
+      font-weight: 700;
+      font-size: 12px !important;
+      line-height: 20px !important;
+    }
 
-* {
-  box-sizing: border-box;
-}
+    .navbar-nav li a:hover,
+    .navbar-nav li.active a {
+      color: #3B4C77 !important;
+      background-color: #F0D000 !important;
+    }
 
-.responsive {
-  padding: 0 6px;
-  float: left;
-  width: 24.99999%;
-}
+    .navbar-default .navbar-toggle {
+      border-color: transparent;
+    }
 
-@media only screen and (max-width: 800px) {
-  .responsive {
-    width: 49.99999%;
-    margin: 6px 0;
-  }
-}
+    .navbar-default .navbar-toggle .icon-bar {
+      background-color: #fff;
+    }
 
-@media only screen and (max-width: 600px) {
-  .responsive {
-    width: 100%;
-  }
-}
+    .navbar-nav .nav-quote > a {
+      background-color: #F0D000 !important;
+      color: #3B4C77 !important;
+      margin: 8px 0 8px 10px;
+      padding: 6px 16px !important;
+      border-radius: 2px;
+      font-weight: 700;
+    }
 
-.clearfix:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-</style>
+    .navbar-nav .nav-quote > a:hover {
+      background-color: #e6c800 !important;
+      color: #3B4C77 !important;
+    }
+
+    /* Gallery page heading */
+    .gallery-header {
+      text-align: center;
+      padding: 50px 20px 30px;
+    }
+
+    .gallery-header h2 {
+      font-family: Montserrat, sans-serif;
+      font-size: 24px;
+      text-transform: uppercase;
+      color: #303030;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+
+    .gallery-header hr {
+      border-top: 2px solid #3B4C77;
+      width: 50px;
+      margin: 0 auto 20px;
+    }
+
+    /* Collage layout */
+    .collage {
+      column-count: 3;
+      column-gap: 8px;
+      padding: 0 20px 40px;
+    }
+
+    .collage-item {
+      break-inside: avoid;
+      margin-bottom: 8px;
+      display: block;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .collage-item img {
+      width: 100%;
+      height: auto;
+      display: block;
+      transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+
+    .collage-item:hover img {
+      transform: scale(1.03);
+      opacity: 0.9;
+    }
+
+    .collage-item .caption {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(59, 76, 119, 0.82);
+      color: #fff;
+      font-family: Montserrat, sans-serif;
+      font-size: 11px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      padding: 8px 12px;
+      transform: translateY(100%);
+      transition: transform 0.3s ease;
+    }
+
+    .collage-item:hover .caption {
+      transform: translateY(0);
+    }
+
+    @media (max-width: 900px) {
+      .collage { column-count: 2; }
+    }
+
+    @media (max-width: 560px) {
+      .collage { column-count: 1; }
+    }
+
+    /* Footer */
+    footer {
+      background-color: #303030;
+      color: #818181;
+      padding: 40px 50px;
+      text-align: center;
+    }
+
+    footer .footer-brand {
+      font-family: Montserrat, sans-serif;
+      color: #fff;
+      font-size: 18px;
+      letter-spacing: 3px;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    footer p {
+      font-size: 13px;
+      margin-bottom: 5px;
+    }
+
+    footer .back-to-top {
+      color: #3B4C77;
+      font-size: 13px;
+      letter-spacing: 2px;
+      text-decoration: none;
+      font-family: Montserrat, sans-serif;
+    }
+
+    footer .back-to-top:hover {
+      color: #fff;
+    }
+
+    .social-links {
+      margin: 15px 0;
+    }
+
+    .social-links a {
+      display: inline-block;
+      color: #818181;
+      margin: 0 8px;
+      transition: color 0.3s;
+    }
+
+    .social-links a:hover {
+      color: #3B4C77;
+    }
+  </style>
 </head>
-<body>
 
-<!-- Pink 3 sign Longitude? -->
-<div class="responsive">
-<div class="gallery">
-  <a target="_blank" href="Images/770x578/3.jpg">
-    <img src="Images/770x578/3.jpg" alt="Cinque Terre" width="770" height="578">
-  </a>
-  <div class="desc">Pink 3 sign</div>
-</div>
-</div>
+<body id="galleryTop">
 
-<!-- Aviva Stadium pic -->
-<div class="responsive">
-<div class="gallery">
-  <a target="_blank" href="Images/770x578/Aviva 1.jpg">
-    <img src="Images/770x578/Aviva 1.jpg" alt="Forest" width="770" height="578">
-  </a>
-  <div class="desc">Aviva</div>
-</div>
-</div>
+  <!-- Navigation -->
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="index.html#about">ABOUT</a></li>
+          <li><a href="index.html#services">SERVICES</a></li>
+          <li><a href="index.html#portfolio">PORTFOLIO</a></li>
+          <li class="active"><a href="gallery.html">GALLERY</a></li>
+          <li><a href="index.html#contact">CONTACT</a></li>
+          <li class="nav-quote"><a href="mailto:infotapleys@gmail.com">GET A QUOTE</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
-<!-- Brown Thomas White Marvel Room -->
-<div class="responsive">
-<div class="gallery">
-  <a target="_blank" href="Images/770x578/Brown Thomas 1.jpg">
-    <img src="Images/770x578/Brown Thomas 1.jpg" alt="Northern Lights" width="770" height="578">
-  </a>
-  <div class="desc">Brown Thomas</div>
-</div>
-</div>
-
-<!-- Brown Thomas Great Gatsby Elevators -->
-<div class="responsive">
-<div class="gallery">
-  <a target="_blank" href="Images/770x578/Brown Thomas 2.jpg">
-    <img src="Images/770x578/Brown Thomas 2.jpg" alt="Mountains" width="770" height="578">
-  </a>
-  <div class="desc">Brown Thomas</div>
-</div>
-</div>
-
-<!-- Dyson -->
-<div class="responsive">
-<div class="gallery">
-    <a target="_blank" href="Images/770x578/Dyson 1.jpg">
-      <img src="Images/770x578/Dyson 1.jpg" alt="Mountains" width="770" height="578">
-    </a>
-    <div class="desc">Dyson</div>
+  <!-- Gallery heading -->
+  <div class="gallery-header">
+    <h2>Our Work</h2>
+    <hr>
+    <p>A selection of signage and graphics installations across Ireland.</p>
   </div>
-</div>
 
-  <!-- Intel -->
-  <div class="responsive">
-<div class="gallery">
-    <a target="_blank" href="Images/770x578/Intel 1.jpg">
-      <img src="Images/770x578/Intel 1.jpg" alt="Mountains" width="770" height="578">
-    </a>
-    <div class="desc">Intel</div>
-  </div>
-</div>
+  <!-- Collage -->
+  <div class="collage">
 
-  <!-- Primark -->
-  <div class="responsive">
-<div class="gallery">
-    <a target="_blank" href="Images/770x578/Primark 1.jpg">
-      <img src="Images/770x578/Primark 1.jpg" alt="Mountains" width="770" height="578">
-    </a>
-    <div class="desc">Primark</div>
+    <div class="collage-item">
+      <img src="Images/770x578/Building%20Wraps/Intel%201.jpg" alt="Building wrap installation for Intel, Dublin">
+      <div class="caption">Intel — Building Wrap</div>
+    </div>
+
+    <div class="collage-item">
+      <img src="Images/770x578/Mesh%20Banners/Aviva%201.jpg" alt="Mesh banner installation at Aviva Stadium, Dublin">
+      <div class="caption">Aviva — Mesh Banner</div>
+    </div>
+
+    <div class="collage-item">
+      <img src="Images/770x578/Window%20Graphics/Primark%201.jpg" alt="Window graphics installation for Primark, Dublin">
+      <div class="caption">Primark — Window Graphics</div>
+    </div>
+
+    <div class="collage-item">
+      <img src="Images/770x578/Brown%20Thomas%201.jpg" alt="In-store graphics installation for Brown Thomas">
+      <div class="caption">Brown Thomas</div>
+    </div>
+
+    <div class="collage-item">
+      <img src="Images/770x578/Mesh%20Banners/Aviva%202.jpg" alt="Mesh banner installation at Aviva Stadium">
+      <div class="caption">Aviva — Mesh Banner</div>
+    </div>
+
+    <div class="collage-item">
+      <img src="Images/770x578/Window%20Graphics/Bord%20Bia.jpg" alt="Window graphics installation for Bord Bia">
+      <div class="caption">Bord Bia — Window Graphics</div>
+    </div>
+
+    <div class="collage-item">
+      <img src="Images/770x578/Building%20Wraps/Bloom.jpg" alt="Building wrap installation, Bloom festival">
+      <div class="caption">Bloom — Building Wrap</div>
+    </div>
+
+    <div class="collage-item">
+      <img src="Images/770x578/Window%20Graphics/Primark%202.jpg" alt="Window graphics installation for Primark">
+      <div class="caption">Primark — Window Graphics</div>
+    </div>
+
+    <div class="collage-item">
+      <img src="Images/770x578/Dyson%201.jpg" alt="Signage installation for Dyson">
+      <div class="caption">Dyson</div>
+    </div>
+
+    <div class="collage-item">
+      <img src="Images/770x578/Mesh%20Banners/Aviva%203.jpg" alt="Mesh banner installation at Aviva Stadium">
+      <div class="caption">Aviva — Mesh Banner</div>
+    </div>
+
+    <div class="collage-item">
+      <img src="Images/770x578/Building%20Wraps/Pop.jpg" alt="Building wrap installation">
+      <div class="caption">Building Wrap</div>
+    </div>
+
+    <div class="collage-item">
+      <img src="Images/770x578/Window%20Graphics/Marvel%20Room.jpg" alt="Marvel room window graphics installation">
+      <div class="caption">Marvel Room — Window Graphics</div>
+    </div>
+
+    <div class="collage-item">
+      <img src="Images/770x578/Brown%20Thomas%202.jpg" alt="In-store graphics installation for Brown Thomas">
+      <div class="caption">Brown Thomas</div>
+    </div>
+
+    <div class="collage-item">
+      <img src="Images/770x578/Window%20Graphics/Primark%203.jpg" alt="Window graphics installation for Primark">
+      <div class="caption">Primark — Window Graphics</div>
+    </div>
+
+    <div class="collage-item">
+      <img src="Images/770x578/3.jpg" alt="Pink 3 sign installation by Tapley Signs">
+      <div class="caption">Tapley Signs</div>
+    </div>
+
   </div>
-</div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container-fluid" style="padding: 30px 50px;">
+      <p class="footer-brand">TAPLEY SIGNS</p>
+      <p>Unit 7, Block 513, Grants Rise, Greenogue Business Park, Rathcoole, Co. Dublin, D24 DY83</p>
+      <p><a href="tel:+353879874533" style="color:#818181;">(087) 987 4533</a> &nbsp;&bull;&nbsp; <a href="mailto:infotapleys@gmail.com" style="color:#818181;">infotapleys@gmail.com</a></p>
+      <br>
+      <div class="social-links">
+        <a href="https://www.instagram.com/tapleysigns/" target="_blank" rel="noopener" aria-label="Tapley Signs on Instagram">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+          </svg>
+        </a>
+        <a href="https://www.facebook.com/tapleysigns1" target="_blank" rel="noopener" aria-label="Tapley Signs on Facebook">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+          </svg>
+        </a>
+        <a href="https://www.linkedin.com/in/tapley-signs-78328518/" target="_blank" rel="noopener" aria-label="Tapley Signs on LinkedIn">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+            <rect x="2" y="9" width="4" height="12"/>
+            <circle cx="4" cy="4" r="2"/>
+          </svg>
+        </a>
+      </div>
+      <p style="font-size:12px; color:#555;">&copy; 2025 Tapley Signs. Family-run since 2004.</p>
+      <br>
+      <a href="#galleryTop" class="back-to-top">
+        <span class="glyphicon glyphicon-chevron-up"></span> Back to top
+      </a>
+    </div>
+  </footer>
+
+  <script>
+    $(document).ready(function () {
+      $(".navbar-nav a").on('click', function () {
+        $(".navbar-collapse").collapse('hide');
+      });
+    });
+  </script>
 
 </body>
 </html>
