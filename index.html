@@ -139,7 +139,7 @@
 
     .navbar {
       margin-bottom: 0;
-      background-color: #3B4C77;
+      background-color: #F0D000;
       z-index: 9999;
       border: 0;
       font-size: 12px !important;
@@ -152,23 +152,23 @@
 
     .navbar li a,
     .navbar .navbar-brand {
-      color: #fff !important;
+      color: #3B4C77 !important;
       font-weight: 700;
     }
 
     .navbar-nav li a:hover,
     .navbar-nav li.active a {
-      color: #3B4C77 !important;
-      background-color: #F0D000 !important;
+      color: #F0D000 !important;
+      background-color: #3B4C77 !important;
     }
 
     .navbar-default .navbar-toggle {
       border-color: transparent;
-      color: #fff !important;
+      color: #3B4C77 !important;
     }
 
     .navbar-default .navbar-toggle .icon-bar {
-      background-color: #fff;
+      background-color: #3B4C77;
     }
 
     /* About section */
@@ -333,8 +333,8 @@
 
     /* Get a Quote navbar button */
     .navbar-nav .nav-quote > a {
-      background-color: #fff !important;
-      color: #3B4C77 !important;
+      background-color: #3B4C77 !important;
+      color: #F0D000 !important;
       margin: 8px 0 8px 10px;
       padding: 6px 16px !important;
       border-radius: 2px;
@@ -342,8 +342,8 @@
     }
 
     .navbar-nav .nav-quote > a:hover {
-      background-color: #e8e8e8 !important;
-      color: #3B4C77 !important;
+      background-color: #2d3a5c !important;
+      color: #F0D000 !important;
     }
 
     /* FAQ accordion */
@@ -460,6 +460,12 @@
         font-size: 16px;
       }
 
+      .jumbotron .btn-lg {
+        width: auto;
+        display: inline-block;
+        margin: 5px;
+      }
+
       .container-fluid {
         padding: 40px 25px;
       }
@@ -471,6 +477,19 @@
       .client-logo {
         max-height: 45px;
       }
+
+      .stats-bar {
+        padding: 30px 15px;
+      }
+
+      .stat-number {
+        font-size: 28px;
+      }
+
+      .stat-label {
+        font-size: 11px;
+        letter-spacing: 1px;
+      }
     }
 
     @media screen and (max-width: 480px) {
@@ -480,6 +499,10 @@
 
       .jumbotron {
         padding: 55px 20px 45px;
+      }
+
+      .stat-number {
+        font-size: 22px;
       }
     }
   </style>
