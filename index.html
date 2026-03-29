@@ -1102,6 +1102,11 @@
         }
       });
 
+      // Close mobile navbar after selecting a link
+      $(".navbar-nav a").on('click', function () {
+        $(".navbar-collapse").collapse('hide');
+      });
+
       // Navbar colour swap on scroll
       var jumbotronHeight = $(".jumbotron").outerHeight();
       function updateNavbar() {
