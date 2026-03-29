@@ -2,12 +2,14 @@
 <html lang="en">
 
 <head>
-  <!-- Theme Made By www.w3schools.com -->
-  <title>Tapley Signs</title>
+  <title>Tapley Signs — Professional Sign &amp; Graphics Company, Dublin</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" href="Images/X Icons/Favicon.png" type="image/x-icon"/>
-  <link rel="shortcut icon" href="Images/X Icons/apple touch icon.png" type="image/x-icon"/>
+  <meta name="description" content="Tapley Signs is a Dublin-based family-run signage company since 2004. We specialise in in-store graphics, building wraps, vinyl banners, lightboxes and professional installation across Ireland.">
+  <link rel="icon" href="Images/X Icons/Favicon.png" type="image/x-icon">
+  <link rel="shortcut icon" href="Images/X Icons/apple touch icon.png" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
@@ -39,8 +41,56 @@
     .jumbotron {
       background-color: #1e8df4;
       color: #fff;
-      padding: 100px 25px;
+      padding: 120px 25px 100px;
       font-family: Montserrat, sans-serif;
+    }
+
+    .jumbotron h1 {
+      font-size: 52px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      margin-bottom: 20px;
+    }
+
+    .jumbotron p.lead {
+      font-size: 20px;
+      font-weight: 400;
+      margin-bottom: 40px;
+      color: rgba(255,255,255,0.9);
+    }
+
+    .jumbotron .btn-default {
+      border-color: #fff;
+      color: #fff;
+      background-color: transparent;
+      font-family: Montserrat, sans-serif;
+      letter-spacing: 2px;
+      font-size: 13px;
+      padding: 12px 30px;
+      margin: 5px;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    .jumbotron .btn-default:hover {
+      background-color: #fff;
+      color: #1e8df4;
+    }
+
+    .jumbotron .btn-solid {
+      background-color: #fff;
+      color: #1e8df4;
+      border: 2px solid #fff;
+      font-family: Montserrat, sans-serif;
+      letter-spacing: 2px;
+      font-size: 13px;
+      padding: 12px 30px;
+      margin: 5px;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    .jumbotron .btn-solid:hover {
+      background-color: transparent;
+      color: #fff;
     }
 
     .container-fluid {
@@ -54,11 +104,6 @@
     .logo-small {
       color: #1e8df4;
       font-size: 50px;
-    }
-
-    .logo {
-      color: #1e8df4;
-      font-size: 200px;
     }
 
     .thumbnail {
@@ -85,64 +130,6 @@
 
     .carousel-indicators li.active {
       background-color: #1e8df4;
-    }
-
-    .item h4 {
-      font-size: 19px;
-      line-height: 1.375em;
-      font-weight: 400;
-      font-style: italic;
-      margin: 70px 0;
-    }
-
-    .item span {
-      font-style: normal;
-    }
-
-    .panel {
-      border: 1px solid #1e8df4;
-      border-radius: 0 !important;
-      transition: box-shadow 0.5s;
-    }
-
-    .panel:hover {
-      box-shadow: 5px 0px 40px rgba(0, 0, 0, .2);
-    }
-
-    .panel-footer .btn:hover {
-      border: 1px solid #1e8df4;
-      background-color: #fff !important;
-      color: #1e8df4;
-    }
-
-    .panel-heading {
-      color: #fff !important;
-      background-color: #1e8df4 !important;
-      padding: 25px;
-      border-bottom: 1px solid transparent;
-      border-top-left-radius: 0px;
-      border-top-right-radius: 0px;
-      border-bottom-left-radius: 0px;
-      border-bottom-right-radius: 0px;
-    }
-
-    .panel-footer {
-      background-color: white !important;
-    }
-
-    .panel-footer h3 {
-      font-size: 32px;
-    }
-
-    .panel-footer h4 {
-      color: #aaa;
-      font-size: 14px;
-    }
-
-    .panel-footer .btn {
-      margin: 15px 0;
-      background-color: #1e8df4;
-      color: #fff;
     }
 
     .navbar {
@@ -173,12 +160,140 @@
       color: #fff !important;
     }
 
-    footer .glyphicon {
-      font-size: 20px;
-      margin-bottom: 20px;
+    .navbar-default .navbar-toggle .icon-bar {
+      background-color: #fff;
+    }
+
+    /* About section */
+    #about-text {
+      font-size: 17px;
+    }
+
+    #about-image {
+      width: 100%;
+      border-radius: 2px;
+    }
+
+    /* Services section */
+    .service-item {
+      padding: 20px 15px;
+    }
+
+    .service-item p {
+      font-size: 14px;
+    }
+
+    /* Portfolio carousels */
+    .portfolio-label {
+      font-size: 15px;
+      margin-top: 10px;
+      color: #303030;
+    }
+
+    /* Client logos */
+    .client-logo {
+      max-height: 55px;
+      max-width: 130px;
+      width: auto;
+      filter: grayscale(100%);
+      opacity: 0.55;
+      transition: filter 0.3s ease, opacity 0.3s ease;
+      display: block;
+      margin: 20px auto;
+    }
+
+    .client-logo:hover {
+      filter: grayscale(0);
+      opacity: 1;
+    }
+
+    /* Contact section */
+    .contact-detail {
+      font-size: 16px;
+      margin-bottom: 15px;
+      color: #555;
+    }
+
+    .contact-detail .glyphicon {
+      color: #1e8df4;
+      margin-right: 10px;
+      font-size: 18px;
+      vertical-align: middle;
+    }
+
+    .contact-detail a {
+      color: #555;
+      text-decoration: none;
+    }
+
+    .contact-detail a:hover {
       color: #1e8df4;
     }
 
+    .contact-divider {
+      border-top: 2px solid #1e8df4;
+      width: 50px;
+      margin: 25px 0;
+    }
+
+    /* Map */
+    .map-wrapper {
+      border-top: 4px solid #1e8df4;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #303030;
+      color: #818181;
+      padding: 40px 50px;
+    }
+
+    footer .footer-brand {
+      font-family: Montserrat, sans-serif;
+      color: #fff;
+      font-size: 18px;
+      letter-spacing: 3px;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    footer p {
+      font-size: 13px;
+      margin-bottom: 5px;
+    }
+
+    footer .back-to-top {
+      color: #1e8df4;
+      font-size: 13px;
+      letter-spacing: 2px;
+      text-decoration: none;
+      font-family: Montserrat, sans-serif;
+    }
+
+    footer .back-to-top:hover {
+      color: #fff;
+    }
+
+    footer .glyphicon-chevron-up {
+      font-size: 16px;
+    }
+
+    .social-links {
+      margin: 15px 0;
+    }
+
+    .social-links a {
+      display: inline-block;
+      color: #818181;
+      margin: 0 8px;
+      transition: color 0.3s;
+    }
+
+    .social-links a:hover {
+      color: #1e8df4;
+    }
+
+    /* Scroll animation */
     .slideanim {
       visibility: hidden;
     }
@@ -190,20 +305,12 @@
       -webkit-animation-duration: 1s;
       visibility: visible;
     }
-    
-    #AboutUsText{
-      font-size: 20px;
-    }
-    #AboutUsImage{
-      width: 100%;
-    }
 
     @keyframes slide {
       0% {
         opacity: 0;
         transform: translateY(70%);
       }
-
       100% {
         opacity: 1;
         transform: translateY(0%);
@@ -215,7 +322,6 @@
         opacity: 0;
         -webkit-transform: translateY(70%);
       }
-
       100% {
         opacity: 1;
         -webkit-transform: translateY(0%);
@@ -228,28 +334,51 @@
         margin: 25px 0;
       }
 
+      .col-sm-6 {
+        margin: 25px 0;
+      }
+
       .btn-lg {
         width: 100%;
         margin-bottom: 35px;
       }
+
+      .jumbotron h1 {
+        font-size: 34px;
+      }
+
+      .jumbotron p.lead {
+        font-size: 16px;
+      }
+
+      .container-fluid {
+        padding: 40px 25px;
+      }
+
+      footer {
+        padding: 40px 25px;
+      }
+
+      .client-logo {
+        max-height: 45px;
+      }
     }
 
     @media screen and (max-width: 480px) {
-      .logo {
-        font-size: 150px;
+      .jumbotron h1 {
+        font-size: 28px;
+      }
+
+      .jumbotron {
+        padding: 80px 20px 70px;
       }
     }
   </style>
 </head>
 
-
-
-
-
-
-
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
 
+  <!-- Navigation -->
   <nav class="navbar navbar-default navbar-fixed-top">
     <div class="container">
       <div class="navbar-header">
@@ -265,378 +394,402 @@
           <li><a href="#about">ABOUT</a></li>
           <li><a href="#services">SERVICES</a></li>
           <li><a href="#portfolio">PORTFOLIO</a></li>
+          <li><a href="#clients">CLIENTS</a></li>
           <li><a href="#contact">CONTACT</a></li>
         </ul>
       </div>
     </div>
   </nav>
 
+  <!-- Hero Section -->
   <div class="jumbotron text-center">
     <h1>Tapley Signs</h1>
-    <p>We specialize in signage</p>
-    <form>
-      <div class="input-group">
-        <!-- <input type="email" class="form-control" size="50" placeholder="Email Address" required>
-        <div class="input-group-btn">
-          <button type="button" class="btn btn-danger">Subscribe</button> -->
-        </div>
-      </div>
-    </form>
+    <p class="lead">Dublin&rsquo;s trusted signage and graphics specialists since 2004.<br>From in-store graphics to full building wraps &mdash; we deliver.</p>
+    <p>
+      <a href="#portfolio" class="btn btn-solid btn-lg">View Our Work</a>
+      <a href="#contact" class="btn btn-default btn-lg">Get in Touch</a>
+    </p>
   </div>
 
   <!-- Container (About Section) -->
   <div id="about" class="container-fluid">
     <div class="row">
       <div class="col-sm-8">
-        <h2>About Us</h2><br>
-        <p id ="AboutUsText">We are a family-run business in operation since 2004 with considerable experience in the manufacturing and
-          installation of an extensive range of high quality graphics. The core of our business is in-store graphics
-          (window, floor, counter, rail, escalator, tills etc), but we also provide large and small scale banners,
-          lightboxes, vinyl wraps, self adhesive stickers, construction site signage and much more... Using the latest
-          in digital technology, our specialist team of printers and fitters will ensure that your concepts and designs
-          create and deliver the expected visual impact.</p>
-        <!-- <br><button class="btn btn-default btn-lg"><a href="#contact">Get in Touch</a></button> -->
+        <h2>About Us</h2>
+        <hr style="border-top: 2px solid #1e8df4; width: 50px; margin: 0 0 25px 0;">
+        <p id="about-text">We are a family-run business in operation since 2004 with considerable experience in the manufacturing and
+          installation of an extensive range of high-quality graphics. The core of our business is in-store graphics
+          &mdash; window, floor, counter, rail, escalator and till graphics &mdash; but we also produce large and small-scale banners,
+          lightboxes, vinyl wraps, self-adhesive stickers, construction site signage and much more.</p>
+        <p id="about-text">Using the latest in digital print technology, our specialist team of printers and fitters will ensure that your
+          concepts and designs create and deliver the expected visual impact &mdash; on time and to the highest standard.</p>
+        <br>
+        <a href="#contact" class="btn btn-default btn-lg" style="background-color:#1e8df4; color:#fff; border-color:#1e8df4; letter-spacing:2px; font-family:Montserrat,sans-serif; font-size:13px;">Get in Touch</a>
       </div>
       <div class="col-sm-4">
-        <!-- <span class="glyphicon glyphicon-signal logo"></span> -->
-        <img id = "AboutUsImage" src="Images/Building Smaller.jpg">
+        <img id="about-image" src="Images/Building%20Smaller.jpg" alt="Tapley Signs building wrap installation on a commercial building in Dublin">
       </div>
     </div>
   </div>
-
-
-
-
-  <!-- our values was here -->
-
-
-
 
   <!-- Container (Services Section) -->
-  <div id="services" class="container-fluid text-center">
-    <h2>SERVICES</h2>
+  <div id="services" class="container-fluid text-center bg-grey">
+    <h2>Services</h2>
+    <hr style="border-top: 2px solid #1e8df4; width: 50px; margin: 0 auto 25px;">
     <h4>What we offer</h4>
+    <div class="row slideanim">
+      <div class="col-sm-4 service-item">
+        <span class="glyphicon glyphicon-shopping-cart logo-small"></span>
+        <h4>In-Store Graphics</h4>
+        <p>Window, floor, counter, rail, escalator and till graphics that transform retail interiors into immersive brand experiences. Trusted by Primark, Brown Thomas and leading retailers across Ireland.</p>
+      </div>
+      <div class="col-sm-4 service-item">
+        <span class="glyphicon glyphicon-flag logo-small"></span>
+        <h4>Vinyl &amp; Mesh Banners</h4>
+        <p>Large and small-scale vinyl and mesh banners for outdoor advertising, events, and construction hoardings. Durable, weather-resistant, and produced to exacting colour standards.</p>
+      </div>
+      <div class="col-sm-4 service-item">
+        <span class="glyphicon glyphicon-home logo-small"></span>
+        <h4>Building Wraps</h4>
+        <p>High-impact large-format building wraps that command attention. From scaffolding graphics to full facade treatments, we handle projects of all scales for clients including Intel and Aviva.</p>
+      </div>
+    </div>
     <br>
     <div class="row slideanim">
-      <div class="col-sm-4">
-        <span class="glyphicon glyphicon-off logo-small"></span>
-        <h4>POWER</h4>
-        <p>Lorem ipsum dolor sit amet..</p>
+      <div class="col-sm-4 service-item">
+        <span class="glyphicon glyphicon-star logo-small"></span>
+        <h4>Lightboxes</h4>
+        <p>Illuminated lightbox signage for retail, hospitality and commercial environments. Maximum brand visibility in any lighting condition, built to last indoors and out.</p>
       </div>
-      <div class="col-sm-4">
-        <span class="glyphicon glyphicon-heart logo-small"></span>
-        <h4>LOVE</h4>
-        <p>Lorem ipsum dolor sit amet..</p>
+      <div class="col-sm-4 service-item">
+        <span class="glyphicon glyphicon-tag logo-small"></span>
+        <h4>Stickers &amp; Vinyl</h4>
+        <p>Custom self-adhesive vinyl stickers, decals and cut vinyl graphics for every application &mdash; from vehicle livery and window manifestations to branded packaging and product labelling.</p>
       </div>
-      <div class="col-sm-4">
-        <span class="glyphicon glyphicon-lock logo-small"></span>
-        <h4>JOB DONE</h4>
-        <p>Lorem ipsum dolor sit amet..</p>
-      </div>
-    </div>
-    <br><br>
-    <div class="row slideanim">
-      <div class="col-sm-4">
-        <span class="glyphicon glyphicon-leaf logo-small"></span>
-        <h4>GREEN</h4>
-        <p>Lorem ipsum dolor sit amet..</p>
-      </div>
-      <div class="col-sm-4">
-        <span class="glyphicon glyphicon-certificate logo-small"></span>
-        <h4>CERTIFIED</h4>
-        <p>Lorem ipsum dolor sit amet..</p>
-      </div>
-      <div class="col-sm-4">
+      <div class="col-sm-4 service-item">
         <span class="glyphicon glyphicon-wrench logo-small"></span>
-        <h4 style="color:#303030;">Installation</h4>
-        <p>We offer installation</p>
+        <h4>Professional Installation</h4>
+        <p>Our specialist team of fitters ensures every job is installed to the highest standard, on schedule and on budget. We cover sites across Dublin and nationwide.</p>
       </div>
     </div>
   </div>
 
   <!-- Container (Portfolio Section) -->
-  <!-- <div id="portfolio" class="container-fluid text-center bg-grey">
-  <h2>Portfolio</h2><br>
-  <h4>What we have created</h4>
-  <div class="row text-center slideanim">
-    <div class="col-sm-4">
-      <div class="thumbnail">
-        <img src="Images/770x578/Primark 1.jpg" alt="Primark" width="770" height="578">
-        <p><strong>Primark</strong></p>
-        <p>Window Graphics</p>
-      </div>
-    </div>
-    <div class="col-sm-4">
-      <div class="thumbnail">
-        <img src="Images/770x578/Aviva 1.jpg" alt="Aviva" width="770" height="578">
-        <p><strong>Aviva</strong></p>
-        <p>Mesh banners</p>
-      </div>
-    </div>
-    <div class="col-sm-4">
-      <div class="thumbnail">
-        <img src="Images/770x578/Intel 1.jpg" alt="Intel" width="770" height="578">
-        <p><strong>Intel</strong></p>
-        <p>Building Wraps</p>
-      </div>
-    </div>
-  </div><br> -->
+  <div id="portfolio" class="container-fluid text-center">
+    <h2>Portfolio</h2>
+    <hr style="border-top: 2px solid #1e8df4; width: 50px; margin: 0 auto 25px;">
+    <h4>A selection of our work</h4>
 
-  <!-- Container (Portfolio Section) -->
-  <div id="portfolio" class="container-fluid text-center bg-grey">
-    <h2>Portfolio</h2><br>
-    <h4>What we have created</h4>
+    <!-- Row 1: Window Graphics + Mesh Banners -->
     <div class="row text-center slideanim">
-      <div class="col-sm-4">
+
+      <!-- Carousel: Window Graphics -->
+      <div class="col-sm-6">
         <div class="thumbnail">
-
-
-          <!-- Carousel Left Window Graphics-->
-          <div id="myCarouselLeft" class="carousel slide" data-ride="carousel">
-            <!-- Indicators -->
+          <div id="carouselWindowGraphics" class="carousel slide" data-ride="carousel">
             <ol class="carousel-indicators">
-              <li data-target="#myCarouselLeft" data-slide-to="0" class="active"></li>
-              <li data-target="#myCarouselLeft" data-slide-to="1"></li>
-              <li data-target="#myCarouselLeft" data-slide-to="2"></li>
-              <li data-target="#myCarouselLeft" data-slide-to="3"></li>
-              <li data-target="#myCarouselLeft" data-slide-to="4"></li>
+              <li data-target="#carouselWindowGraphics" data-slide-to="0" class="active"></li>
+              <li data-target="#carouselWindowGraphics" data-slide-to="1"></li>
+              <li data-target="#carouselWindowGraphics" data-slide-to="2"></li>
+              <li data-target="#carouselWindowGraphics" data-slide-to="3"></li>
+              <li data-target="#carouselWindowGraphics" data-slide-to="4"></li>
             </ol>
-
-            <!-- Wrapper for slides -->
             <div class="carousel-inner">
               <div class="item active">
-                <img src="Images/770x578/Window Graphics/Bord Bia.jpg" alt="Los Angeles">
+                <img src="Images/770x578/Window%20Graphics/Bord%20Bia.jpg" alt="Bord Bia window graphics installation, Dublin">
               </div>
-
               <div class="item">
-                <img src="Images/770x578/Window Graphics/Marvel Room.jpg" alt="Chicago">
+                <img src="Images/770x578/Window%20Graphics/Marvel%20Room.jpg" alt="Marvel themed window graphics installation">
               </div>
-
               <div class="item">
-                <img src="Images/770x578/Window Graphics/Primark 1.jpg" alt="New York">
+                <img src="Images/770x578/Window%20Graphics/Primark%201.jpg" alt="Primark window graphics installation, Dublin city centre">
               </div>
-
               <div class="item">
-                <img src="Images/770x578/Window Graphics/Primark 2.jpg" alt="New York">
+                <img src="Images/770x578/Window%20Graphics/Primark%202.jpg" alt="Primark window graphics, large-format retail signage">
               </div>
-
               <div class="item">
-                <img src="Images/770x578/Window Graphics/Primark 3.jpg" alt="New York">
+                <img src="Images/770x578/Window%20Graphics/Primark%203.jpg" alt="Primark window vinyl graphics installation">
               </div>
             </div>
-
-            <!-- Left and right controls -->
-            <a class="left carousel-control" href="#myCarouselLeft" data-slide="prev">
-              <span class="glyphicon glyphicon-chevron-left"></span>
+            <a class="left carousel-control" href="#carouselWindowGraphics" role="button" data-slide="prev">
+              <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
               <span class="sr-only">Previous</span>
             </a>
-            <a class="right carousel-control" href="#myCarouselLeft" data-slide="next">
-              <span class="glyphicon glyphicon-chevron-right"></span>
+            <a class="right carousel-control" href="#carouselWindowGraphics" role="button" data-slide="next">
+              <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
               <span class="sr-only">Next</span>
             </a>
           </div>
-          <p><strong>Window Graphics</strong></p>
+          <p class="portfolio-label"><strong>Window Graphics</strong></p>
         </div>
       </div>
 
-
-      <!-- Carousel Middle Mesh Banners-->
-      <div class="col-sm-4">
+      <!-- Carousel: Mesh Banners -->
+      <div class="col-sm-6">
         <div class="thumbnail">
-          <!-- Carousel stuffs -->
-          <div id="myCarouselMiddle" class="carousel slide" data-ride="carousel">
-            <!-- Indicators -->
+          <div id="carouselMeshBanners" class="carousel slide" data-ride="carousel">
             <ol class="carousel-indicators">
-              <li data-target="#myCarouselMiddle" data-slide-to="0" class="active"></li>
-              <li data-target="#myCarouselMiddle" data-slide-to="1"></li>
+              <li data-target="#carouselMeshBanners" data-slide-to="0" class="active"></li>
+              <li data-target="#carouselMeshBanners" data-slide-to="1"></li>
+              <li data-target="#carouselMeshBanners" data-slide-to="2"></li>
             </ol>
-
-            <!-- Wrapper for slides -->
             <div class="carousel-inner">
               <div class="item active">
-                <img src="Images/770x578/Mesh Banners/Aviva 1.jpg" alt="Los Angeles">
+                <img src="Images/770x578/Mesh%20Banners/Aviva%201.jpg" alt="Aviva Stadium mesh banner installation, Dublin">
               </div>
-
               <div class="item">
-                <img src="Images/770x578/Mesh Banners/Aviva 2.jpg" alt="Chicago">
+                <img src="Images/770x578/Mesh%20Banners/Aviva%202.jpg" alt="Aviva mesh banner, large-format outdoor advertising">
+              </div>
+              <div class="item">
+                <img src="Images/770x578/Mesh%20Banners/Aviva%203.jpg" alt="Aviva mesh banner close-up detail, Tapley Signs installation">
               </div>
             </div>
-
-            <!-- Left and right controls -->
-            <a class="left carousel-control" href="#myCarouselMiddle" data-slide="prev">
-              <span class="glyphicon glyphicon-chevron-left"></span>
+            <a class="left carousel-control" href="#carouselMeshBanners" role="button" data-slide="prev">
+              <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
               <span class="sr-only">Previous</span>
             </a>
-            <a class="right carousel-control" href="#myCarouselMiddle" data-slide="next">
-              <span class="glyphicon glyphicon-chevron-right"></span>
+            <a class="right carousel-control" href="#carouselMeshBanners" role="button" data-slide="next">
+              <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
               <span class="sr-only">Next</span>
             </a>
           </div>
-          <p><strong>Mesh Banners</strong></p>
+          <p class="portfolio-label"><strong>Mesh Banners</strong></p>
         </div>
       </div>
+    </div>
 
+    <!-- Row 2: Building Wraps + In-Store Graphics -->
+    <div class="row text-center slideanim">
 
-      <!-- Carousel Right Building Wraps-->
-      <div class="col-sm-4">
+      <!-- Carousel: Building Wraps -->
+      <div class="col-sm-6">
         <div class="thumbnail">
-          <!-- Carousel stuffs -->
-          <div id="myCarouselRight" class="carousel slide" data-ride="carousel">
-            <!-- Indicators -->
+          <div id="carouselBuildingWraps" class="carousel slide" data-ride="carousel">
             <ol class="carousel-indicators">
-              <li data-target="#myCarouselRight" data-slide-to="0" class="active"></li>
-              <li data-target="#myCarouselRight" data-slide-to="1"></li>
-              <li data-target="#myCarouselRight" data-slide-to="2"></li>
+              <li data-target="#carouselBuildingWraps" data-slide-to="0" class="active"></li>
+              <li data-target="#carouselBuildingWraps" data-slide-to="1"></li>
+              <li data-target="#carouselBuildingWraps" data-slide-to="2"></li>
             </ol>
-
-            <!-- Wrapper for slides -->
             <div class="carousel-inner">
               <div class="item active">
-                <img src="Images/770x578/Building Wraps/Bloom.jpg" alt="Los Angeles">
+                <img src="Images/770x578/Building%20Wraps/Bloom.jpg" alt="Bloom festival building wrap installation, Dublin">
               </div>
-
               <div class="item">
-                <img src="Images/770x578/Building Wraps/Intel 1.jpg" alt="Chicago">
+                <img src="Images/770x578/Building%20Wraps/Intel%201.jpg" alt="Intel building wrap installation, large-format facade graphics">
               </div>
-
               <div class="item">
-                <img src="Images/770x578/Building Wraps/Pop.jpg" alt="New York">
+                <img src="Images/770x578/Building%20Wraps/Pop.jpg" alt="Pop-up building wrap graphics, Tapley Signs installation">
               </div>
             </div>
-
-            <!-- Left and right controls -->
-            <a class="left carousel-control" href="#myCarouselRight" data-slide="prev">
-              <span class="glyphicon glyphicon-chevron-left"></span>
+            <a class="left carousel-control" href="#carouselBuildingWraps" role="button" data-slide="prev">
+              <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
               <span class="sr-only">Previous</span>
             </a>
-            <a class="right carousel-control" href="#myCarouselRight" data-slide="next">
-              <span class="glyphicon glyphicon-chevron-right"></span>
+            <a class="right carousel-control" href="#carouselBuildingWraps" role="button" data-slide="next">
+              <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
               <span class="sr-only">Next</span>
             </a>
           </div>
-          <p><strong>Building Wraps</strong></p>
-        </div>
-      </div>
-    </div><br>
-
-    <h2>What our customers say</h2>
-    <div id="myCarousel" class="carousel slide text-center" data-ride="carousel">
-      <!-- Indicators -->
-      <ol class="carousel-indicators">
-        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-        <li data-target="#myCarousel" data-slide-to="1"></li>
-        <li data-target="#myCarousel" data-slide-to="2"></li>
-      </ol>
-
-      <!-- Wrapper for slides -->
-      <div class="carousel-inner" role="listbox">
-        <div class="item active">
-          <h4>"This company is the best. I am so happy with the result!"<br><span>Michael Roe, Vice President, Comment
-              Box</span></h4>
-        </div>
-        <div class="item">
-          <h4>"One word... WOW!!"<br><span>John Doe, Salesman, Rep Inc</span></h4>
-        </div>
-        <div class="item">
-          <h4>"Could I... BE any more happy with this company?"<br><span>Chandler Bing, Actor, FriendsAlot</span></h4>
+          <p class="portfolio-label"><strong>Building Wraps</strong></p>
         </div>
       </div>
 
-      <!-- Left and right controls -->
-      <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-      </a>
-      <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-      </a>
+      <!-- Carousel: In-Store Graphics -->
+      <div class="col-sm-6">
+        <div class="thumbnail">
+          <div id="carouselInStore" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+              <li data-target="#carouselInStore" data-slide-to="0" class="active"></li>
+              <li data-target="#carouselInStore" data-slide-to="1"></li>
+              <li data-target="#carouselInStore" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+              <div class="item active">
+                <img src="Images/770x578/Brown%20Thomas%201.jpg" alt="Brown Thomas in-store graphics installation, Dublin">
+              </div>
+              <div class="item">
+                <img src="Images/770x578/Brown%20Thomas%202.jpg" alt="Brown Thomas retail window and interior graphics, Dublin">
+              </div>
+              <div class="item">
+                <img src="Images/770x578/Dyson%201.jpg" alt="Dyson in-store graphics and display installation">
+              </div>
+            </div>
+            <a class="left carousel-control" href="#carouselInStore" role="button" data-slide="prev">
+              <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#carouselInStore" role="button" data-slide="next">
+              <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+          <p class="portfolio-label"><strong>In-Store Graphics</strong></p>
+        </div>
+      </div>
     </div>
   </div>
 
-
-
-
-  <!-- Container (Pricing Section) was here -->
-
-
-
+  <!-- Container (Clients Section) -->
+  <div id="clients" class="container-fluid text-center bg-grey">
+    <h2>Our Clients</h2>
+    <hr style="border-top: 2px solid #1e8df4; width: 50px; margin: 0 auto 25px;">
+    <h4>Trusted by Ireland&rsquo;s leading brands</h4>
+    <div class="row slideanim" style="margin-top: 20px; margin-bottom: 10px;">
+      <div class="col-xs-4 col-sm-4">
+        <img src="Images/Logos/Grayscale/Primark.png" alt="Primark" class="client-logo">
+      </div>
+      <div class="col-xs-4 col-sm-4">
+        <img src="Images/Logos/Grayscale/Aviva.png" alt="Aviva" class="client-logo">
+      </div>
+      <div class="col-xs-4 col-sm-4">
+        <img src="Images/Logos/Grayscale/Intel.png" alt="Intel" class="client-logo">
+      </div>
+    </div>
+    <div class="row slideanim" style="margin-bottom: 10px;">
+      <div class="col-xs-4 col-sm-4">
+        <img src="Images/Logos/Grayscale/Brown%20Thomas.png" alt="Brown Thomas" class="client-logo">
+      </div>
+      <div class="col-xs-4 col-sm-4">
+        <img src="Images/Logos/Grayscale/Dyson.png" alt="Dyson" class="client-logo">
+      </div>
+      <div class="col-xs-4 col-sm-4">
+        <img src="Images/Logos/Grayscale/Bord%20Bia.png" alt="Bord Bia" class="client-logo">
+      </div>
+    </div>
+    <div class="row slideanim">
+      <div class="col-xs-4 col-sm-4">
+        <img src="Images/Logos/Grayscale/Vodafone.png" alt="Vodafone" class="client-logo">
+      </div>
+      <div class="col-xs-4 col-sm-4">
+        <img src="Images/Logos/Grayscale/RTE.png" alt="RT&Eacute;" class="client-logo">
+      </div>
+      <div class="col-xs-4 col-sm-4">
+        <img src="Images/Logos/Grayscale/OPW.png" alt="OPW" class="client-logo">
+      </div>
+    </div>
+  </div>
 
   <!-- Container (Contact Section) -->
-  <div id="contact" class="container-fluid bg-grey">
-    <h2 class="text-center">CONTACT</h2>
+  <div id="contact" class="container-fluid">
     <div class="row">
-      <div class="col-sm-5">
-        <p>Contact us and we'll get back to you within 24 hours.</p>
-        <p><span class="glyphicon glyphicon-map-marker"></span> Dublin, Ireland</p>
-        <p><span class="glyphicon glyphicon-phone"></span> (01) 401 9129</p>
-        <p><span class="glyphicon glyphicon-envelope"></span> infotapleys@gmail.com</p>
+      <div class="col-sm-12 text-center">
+        <h2>Contact Us</h2>
+        <hr style="border-top: 2px solid #1e8df4; width: 50px; margin: 0 auto 25px;">
+        <h4>Get in touch &mdash; we&rsquo;d love to hear about your project</h4>
       </div>
-      <div class="col-sm-7 slideanim">
-        <div class="row">
-          <div class="col-sm-6 form-group">
-            <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
-          </div>
-          <div class="col-sm-6 form-group">
-            <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
-          </div>
-        </div>
-        <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea><br>
-        <div class="row">
-          <div class="col-sm-12 form-group">
-            <button class="btn btn-default pull-right" type="submit">Send</button>
-          </div>
+    </div>
+    <div class="row slideanim" style="margin-top: 20px;">
+      <div class="col-sm-4 text-center">
+        <span class="glyphicon glyphicon-map-marker logo-small"></span>
+        <h4 style="margin-top:15px;">Address</h4>
+        <p class="contact-detail">
+          Unit 7, Block 513, Grants Rise<br>
+          Greenogue Business Park<br>
+          Rathcoole, Co. Dublin<br>
+          D24 DY83, Ireland
+        </p>
+      </div>
+      <div class="col-sm-4 text-center">
+        <span class="glyphicon glyphicon-phone logo-small"></span>
+        <h4 style="margin-top:15px;">Phone</h4>
+        <p class="contact-detail">
+          <a href="tel:+353879874533">(087) 987 4533</a>
+        </p>
+      </div>
+      <div class="col-sm-4 text-center">
+        <span class="glyphicon glyphicon-envelope logo-small"></span>
+        <h4 style="margin-top:15px;">Email</h4>
+        <p class="contact-detail">
+          <a href="mailto:infotapleys@gmail.com">infotapleys@gmail.com</a>
+        </p>
+      </div>
+    </div>
+    <div class="row" style="margin-top: 30px;">
+      <div class="col-sm-12 text-center">
+        <p style="font-family: Montserrat, sans-serif; letter-spacing: 3px; font-size: 12px; color: #303030;">FOLLOW US</p>
+        <div class="social-links">
+          <a href="https://www.instagram.com/tapleysigns/" target="_blank" rel="noopener" aria-label="Tapley Signs on Instagram">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+            </svg>
+          </a>
+          <a href="https://www.facebook.com/tapleysigns1" target="_blank" rel="noopener" aria-label="Tapley Signs on Facebook">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+            </svg>
+          </a>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- Image of location/map -->
-  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1411.1547209363448!2d-6.473847750111032!3d53.2984581456764!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48677406e258fa91%3A0x20828ab01440ace0!2s513%20Grants%20Rise%2C%20Co.%20Dublin!5e1!3m2!1sen!2sie!4v1622557041220!5m2!1sen!2sie" width=100% height="600" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+  <!-- Google Maps -->
+  <div class="map-wrapper">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1411.1547209363448!2d-6.473847750111032!3d53.2984581456764!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48677406e258fa91%3A0x20828ab01440ace0!2s513%20Grants%20Rise%2C%20Co.%20Dublin!5e1!3m2!1sen!2sie!4v1622557041220!5m2!1sen!2sie"
+      width="100%" height="450" style="border:0; display:block;" allowfullscreen="" loading="lazy"
+      title="Tapley Signs location — Greenogue Business Park, Rathcoole, Co. Dublin">
+    </iframe>
+  </div>
 
-  <footer class="container-fluid text-center">
-    <a href="#myPage" title="To Top">
-      <span class="glyphicon glyphicon-chevron-up"></span>
-    </a>
+  <!-- Footer -->
+  <footer class="text-center">
+    <div class="container-fluid" style="padding: 30px 50px;">
+      <p class="footer-brand">TAPLEY SIGNS</p>
+      <p>Unit 7, Block 513, Grants Rise, Greenogue Business Park, Rathcoole, Co. Dublin, D24 DY83</p>
+      <p><a href="tel:+353879874533" style="color:#818181;">(087) 987 4533</a> &nbsp;&bull;&nbsp; <a href="mailto:infotapleys@gmail.com" style="color:#818181;">infotapleys@gmail.com</a></p>
+      <br>
+      <div class="social-links">
+        <a href="https://www.instagram.com/tapleysigns/" target="_blank" rel="noopener" aria-label="Tapley Signs on Instagram">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+          </svg>
+        </a>
+        <a href="https://www.facebook.com/tapleysigns1" target="_blank" rel="noopener" aria-label="Tapley Signs on Facebook">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+          </svg>
+        </a>
+      </div>
+      <p style="font-size:12px; color:#555;">&copy; 2025 Tapley Signs. Family-run since 2004.</p>
+      <br>
+      <a href="#myPage" class="back-to-top">
+        <span class="glyphicon glyphicon-chevron-up"></span> Back to top
+      </a>
+    </div>
   </footer>
 
   <script>
     $(document).ready(function () {
-      // Add smooth scrolling to all links in navbar + footer link
-      $(".navbar a, footer a[href='#myPage']").on('click', function (event) {
-        // Make sure this.hash has a value before overriding default behavior
+      // Smooth scrolling for navbar and footer links
+      $(".navbar a, .back-to-top, .jumbotron a[href^='#']").on('click', function (event) {
         if (this.hash !== "") {
-          // Prevent default anchor click behavior
           event.preventDefault();
-
-          // Store hash
           var hash = this.hash;
-
-          // Using jQuery's animate() method to add smooth page scroll
-          // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
           $('html, body').animate({
             scrollTop: $(hash).offset().top
           }, 900, function () {
-
-            // Add hash (#) to URL when done scrolling (default click behavior)
             window.location.hash = hash;
           });
-        } // End if
+        }
       });
 
+      // Scroll reveal animation
       $(window).scroll(function () {
         $(".slideanim").each(function () {
           var pos = $(this).offset().top;
-
           var winTop = $(window).scrollTop();
           if (pos < winTop + 600) {
             $(this).addClass("slide");
           }
         });
       });
-    })
+    });
   </script>
 
 </body>
-
 </html>
