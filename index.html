@@ -295,6 +295,107 @@
       color: #1e8df4;
     }
 
+    /* Stats bar */
+    .stats-bar {
+      background-color: #303030;
+      padding: 40px 50px;
+    }
+
+    .stat-item {
+      text-align: center;
+      padding: 10px 0;
+    }
+
+    .stat-number {
+      font-family: Montserrat, sans-serif;
+      font-size: 36px;
+      font-weight: 700;
+      color: #1e8df4;
+      line-height: 1.1;
+      display: block;
+    }
+
+    .stat-label {
+      font-size: 13px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #aaa;
+      font-family: Montserrat, sans-serif;
+      display: block;
+      margin-top: 6px;
+    }
+
+    /* Get a Quote navbar button */
+    .navbar-nav .nav-quote > a {
+      background-color: #fff !important;
+      color: #1e8df4 !important;
+      margin: 8px 0 8px 10px;
+      padding: 6px 16px !important;
+      border-radius: 2px;
+      font-weight: 700;
+    }
+
+    .navbar-nav .nav-quote > a:hover {
+      background-color: #e8e8e8 !important;
+      color: #1e8df4 !important;
+    }
+
+    /* FAQ accordion */
+    .faq-panel {
+      background-color: #fff;
+      border: 1px solid #e0e0e0;
+      border-radius: 2px !important;
+      margin-bottom: 8px;
+      box-shadow: none;
+    }
+
+    .faq-panel .panel-heading {
+      background-color: #fff !important;
+      color: #303030 !important;
+      padding: 16px 20px;
+      border-bottom: 1px solid transparent;
+      cursor: pointer;
+    }
+
+    .faq-panel .panel-heading:hover {
+      background-color: #f6f6f6 !important;
+    }
+
+    .faq-panel .panel-heading h4 {
+      font-size: 16px;
+      font-weight: 600;
+      color: #303030;
+      margin: 0;
+      padding-right: 20px;
+    }
+
+    .faq-panel .panel-heading .glyphicon {
+      color: #1e8df4;
+      float: right;
+      margin-top: 2px;
+      transition: transform 0.2s;
+    }
+
+    .faq-panel .panel-heading.collapsed .glyphicon {
+      transform: rotate(-90deg);
+    }
+
+    .faq-panel .panel-body {
+      padding: 16px 20px;
+      color: #555;
+      font-size: 16px;
+      border-top: 1px solid #e8e8e8;
+    }
+
+    .artwork-note {
+      background-color: #f0f7ff;
+      border-left: 4px solid #1e8df4;
+      padding: 15px 20px;
+      margin-top: 30px;
+      font-size: 15px;
+      color: #444;
+    }
+
     /* Scroll animation */
     .slideanim {
       visibility: hidden;
@@ -397,7 +498,9 @@
           <li><a href="#services">SERVICES</a></li>
           <li><a href="#portfolio">PORTFOLIO</a></li>
           <li><a href="#clients">CLIENTS</a></li>
+          <li><a href="#faq">FAQ</a></li>
           <li><a href="#contact">CONTACT</a></li>
+          <li class="nav-quote"><a href="mailto:infotapleys@gmail.com">GET A QUOTE</a></li>
         </ul>
       </div>
     </div>
@@ -409,8 +512,30 @@
     <p class="lead">Dublin&rsquo;s trusted signage and graphics specialists since 2004.<br>From in-store graphics to full building wraps &mdash; we deliver.</p>
     <p>
       <a href="#portfolio" class="btn btn-solid btn-lg">View Our Work</a>
-      <a href="#contact" class="btn btn-default btn-lg">Get in Touch</a>
+      <a href="mailto:infotapleys@gmail.com" class="btn btn-default btn-lg">Get a Quote</a>
     </p>
+  </div>
+
+  <!-- Stats Bar -->
+  <div class="stats-bar">
+    <div class="row">
+      <div class="col-xs-6 col-sm-3 stat-item">
+        <span class="stat-number">21+</span>
+        <span class="stat-label">Years in Business</span>
+      </div>
+      <div class="col-xs-6 col-sm-3 stat-item">
+        <span class="stat-number">1,000s</span>
+        <span class="stat-label">Projects Completed</span>
+      </div>
+      <div class="col-xs-6 col-sm-3 stat-item">
+        <span class="stat-number">9+</span>
+        <span class="stat-label">Major Brand Clients</span>
+      </div>
+      <div class="col-xs-6 col-sm-3 stat-item">
+        <span class="stat-number">All&#8209;Ireland</span>
+        <span class="stat-label">Nationwide Installation</span>
+      </div>
+    </div>
   </div>
 
   <!-- Container (About Section) -->
@@ -425,6 +550,8 @@
           lightboxes, vinyl wraps, self-adhesive stickers, construction site signage and much more.</p>
         <p id="about-text">Using the latest in digital print technology, our specialist team of printers and fitters will ensure that your
           concepts and designs create and deliver the expected visual impact &mdash; on time and to the highest standard.</p>
+        <p id="about-text">We handle multi-location rollouts across the whole of Ireland &mdash; coordinating simultaneous
+          installations across Dublin, Cork, Limerick and Galway. Consistent quality, delivered on schedule, nationwide.</p>
         <br>
         <a href="#contact" class="btn btn-default btn-lg" style="background-color:#1e8df4; color:#fff; border-color:#1e8df4; letter-spacing:2px; font-family:Montserrat,sans-serif; font-size:13px;">Get in Touch</a>
       </div>
@@ -448,7 +575,7 @@
       <div class="col-sm-4 service-item">
         <span class="glyphicon glyphicon-flag logo-small"></span>
         <h4>Vinyl &amp; Mesh Banners</h4>
-        <p>Large and small-scale vinyl and mesh banners for outdoor advertising, events, and construction hoardings. Durable, weather-resistant, and produced to exacting colour standards.</p>
+        <p>Large and small-scale vinyl and mesh banners for outdoor advertising, events and construction hoardings. Durable, weather-resistant and produced to exacting colour standards.</p>
       </div>
       <div class="col-sm-4 service-item">
         <span class="glyphicon glyphicon-home logo-small"></span>
@@ -483,7 +610,7 @@
     <h4>A selection of our work</h4>
 
     <!-- Row 1: Window Graphics + Mesh Banners -->
-    <div class="row text-center slideanim">
+    <div class="row text-center">
 
       <!-- Carousel: Window Graphics -->
       <div class="col-sm-6">
@@ -561,7 +688,7 @@
     </div>
 
     <!-- Row 2: Building Wraps + In-Store Graphics -->
-    <div class="row text-center slideanim">
+    <div class="row text-center">
 
       <!-- Carousel: Building Wraps -->
       <div class="col-sm-6">
@@ -671,13 +798,116 @@
     </div>
   </div>
 
+  <!-- Container (FAQ Section) -->
+  <div id="faq" class="container-fluid">
+    <div class="row">
+      <div class="col-sm-10 col-sm-offset-1">
+        <h2 class="text-center">Frequently Asked Questions</h2>
+        <hr style="border-top: 2px solid #1e8df4; width: 50px; margin: 0 auto 40px;">
+
+        <div class="panel-group" id="faqAccordion">
+
+          <div class="panel faq-panel">
+            <div class="panel-heading" data-toggle="collapse" data-target="#faq1" data-parent="#faqAccordion">
+              <h4>Do you install nationwide?
+                <span class="glyphicon glyphicon-chevron-down"></span>
+              </h4>
+            </div>
+            <div id="faq1" class="panel-collapse collapse in">
+              <div class="panel-body">
+                Yes &mdash; we install across the whole of Ireland. We regularly manage multi-branch rollouts covering
+                Dublin, Cork, Limerick and Galway in a single coordinated project.
+              </div>
+            </div>
+          </div>
+
+          <div class="panel faq-panel">
+            <div class="panel-heading collapsed" data-toggle="collapse" data-target="#faq2" data-parent="#faqAccordion">
+              <h4>What types of surfaces can you apply graphics to?
+                <span class="glyphicon glyphicon-chevron-down"></span>
+              </h4>
+            </div>
+            <div id="faq2" class="panel-collapse collapse">
+              <div class="panel-body">
+                Almost any surface &mdash; glass, walls, floors, ceilings, vehicles, scaffolding, hoardings, retail
+                fixtures and more. If you have an unusual application in mind, get in touch and we&rsquo;ll work
+                out the right solution.
+              </div>
+            </div>
+          </div>
+
+          <div class="panel faq-panel">
+            <div class="panel-heading collapsed" data-toggle="collapse" data-target="#faq3" data-parent="#faqAccordion">
+              <h4>Do you offer a design service?
+                <span class="glyphicon glyphicon-chevron-down"></span>
+              </h4>
+            </div>
+            <div id="faq3" class="panel-collapse collapse">
+              <div class="panel-body">
+                We work with print-ready artwork supplied by you or your agency. If your artwork isn&rsquo;t quite
+                ready for print, we can advise on adjustments. For new design work, we can recommend trusted
+                design partners.
+              </div>
+            </div>
+          </div>
+
+          <div class="panel faq-panel">
+            <div class="panel-heading collapsed" data-toggle="collapse" data-target="#faq4" data-parent="#faqAccordion">
+              <h4>What file formats do you accept?
+                <span class="glyphicon glyphicon-chevron-down"></span>
+              </h4>
+            </div>
+            <div id="faq4" class="panel-collapse collapse">
+              <div class="panel-body">
+                We accept print-ready <strong>PDF, AI or EPS</strong> files. Images should be at least
+                <strong>300dpi</strong> at the intended print size. High-resolution TIFF or JPEG files are also
+                accepted. If you&rsquo;re unsure, send us what you have and we&rsquo;ll advise.
+              </div>
+            </div>
+          </div>
+
+          <div class="panel faq-panel">
+            <div class="panel-heading collapsed" data-toggle="collapse" data-target="#faq5" data-parent="#faqAccordion">
+              <h4>What are your typical turnaround times?
+                <span class="glyphicon glyphicon-chevron-down"></span>
+              </h4>
+            </div>
+            <div id="faq5" class="panel-collapse collapse">
+              <div class="panel-body">
+                Turnaround depends on the size and complexity of the job. Standard print and installation work is
+                typically completed within <strong>5&ndash;10 working days</strong> from approval of artwork.
+                For large-scale or multi-location projects, we&rsquo;ll agree a detailed schedule with you upfront.
+              </div>
+            </div>
+          </div>
+
+          <div class="panel faq-panel">
+            <div class="panel-heading collapsed" data-toggle="collapse" data-target="#faq6" data-parent="#faqAccordion">
+              <h4>How do I get a quote?
+                <span class="glyphicon glyphicon-chevron-down"></span>
+              </h4>
+            </div>
+            <div id="faq6" class="panel-collapse collapse">
+              <div class="panel-body">
+                Call us on <a href="tel:+353879874533">(087) 987 4533</a> or email
+                <a href="mailto:infotapleys@gmail.com">infotapleys@gmail.com</a> with a brief description of your
+                project &mdash; dimensions, quantity, material type and location. We&rsquo;ll come back to you promptly.
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- Container (Contact Section) -->
   <div id="contact" class="container-fluid">
     <div class="row">
       <div class="col-sm-12 text-center">
         <h2>Contact Us</h2>
         <hr style="border-top: 2px solid #1e8df4; width: 50px; margin: 0 auto 25px;">
-        <h4>Get in touch &mdash; we&rsquo;d love to hear about your project</h4>
+        <h4>Tell us about your project and we&rsquo;ll get back to you promptly.</h4>
       </div>
     </div>
     <div class="row slideanim" style="margin-top: 20px;">
@@ -704,6 +934,15 @@
         <p class="contact-detail">
           <a href="mailto:infotapleys@gmail.com">infotapleys@gmail.com</a>
         </p>
+      </div>
+    </div>
+    <div class="row slideanim">
+      <div class="col-sm-10 col-sm-offset-1">
+        <div class="artwork-note">
+          <span class="glyphicon glyphicon-paperclip" style="color:#1e8df4; margin-right:8px;"></span>
+          <strong>Sending artwork?</strong> Supply print-ready <strong>PDF, AI or EPS</strong> files at <strong>300dpi</strong> minimum.
+          Not sure? Email us what you have and we&rsquo;ll advise.
+        </div>
       </div>
     </div>
     <div class="row" style="margin-top: 30px;">
@@ -757,7 +996,7 @@
           </svg>
         </a>
       </div>
-      <p style="font-size:12px; color:#555;">&copy; 2025 Tapley Signs. Family-run since 2004.</p>
+      <p style="font-size:12px; color:#555;">&copy; 2025 Tapley Signs. Family-run since 2004. &nbsp;&bull;&nbsp; <a href="privacy-policy.html" style="color:#818181;">Privacy Policy</a></p>
       <br>
       <a href="#myPage" class="back-to-top">
         <span class="glyphicon glyphicon-chevron-up"></span> Back to top
