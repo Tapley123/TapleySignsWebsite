@@ -346,6 +346,37 @@
       color: #F0D000 !important;
     }
 
+    .navbar.navbar-scrolled {
+      background-color: #3B4C77;
+    }
+
+    .navbar.navbar-scrolled .navbar li a,
+    .navbar.navbar-scrolled .navbar-brand,
+    .navbar.navbar-scrolled li a {
+      color: #fff !important;
+    }
+
+    .navbar.navbar-scrolled .navbar-nav li a:hover,
+    .navbar.navbar-scrolled .navbar-nav li.active a {
+      color: #3B4C77 !important;
+      background-color: #F0D000 !important;
+    }
+
+    .navbar.navbar-scrolled .navbar-default .navbar-toggle .icon-bar,
+    .navbar.navbar-scrolled .navbar-toggle .icon-bar {
+      background-color: #fff;
+    }
+
+    .navbar.navbar-scrolled .navbar-nav .nav-quote > a {
+      background-color: #F0D000 !important;
+      color: #3B4C77 !important;
+    }
+
+    .navbar.navbar-scrolled .navbar-nav .nav-quote > a:hover {
+      background-color: #e6c800 !important;
+      color: #3B4C77 !important;
+    }
+
     /* FAQ accordion */
     .faq-panel {
       background-color: #fff;
@@ -1070,6 +1101,18 @@
           });
         }
       });
+
+      // Navbar colour swap on scroll
+      var jumbotronHeight = $(".jumbotron").outerHeight();
+      function updateNavbar() {
+        if ($(window).scrollTop() > jumbotronHeight - 60) {
+          $(".navbar").addClass("navbar-scrolled");
+        } else {
+          $(".navbar").removeClass("navbar-scrolled");
+        }
+      }
+      $(window).scroll(updateNavbar);
+      updateNavbar();
 
       // Scroll reveal animation
       $(window).scroll(function () {
